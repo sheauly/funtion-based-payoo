@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main file</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header>
+            <nav class="flex justify-around items-center">
+                <img src="assets/Group.png" alt="" />
+                <div>
+                    <h1 class="text-3xl font-bold"> $ <span id="main-balance">4500</span></h1>
+                    <p class="border rounded p-1">available balance</p>
+                </div>
+                <button class="btn"> logout</button>
+            </nav>
+            <section class="mt-10">
+                <h1 class="text-2xl font-bold ">🔥 Welcome to Payooo!</h1>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+                <div class="cards grid grid-cols-3 mt-14 p-4 gap-5">
+                    <div id="add-money-box"
+                        class="box border border-emerald-900 rounded-2xl cursor-pointer border p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/wallet1.png" alt="" />
+                        <h3>Add Money</h3>
+                    </div>
+                    <div id="cashout-box" class="box border border-emerald-900 rounded-2xl p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/purse1.png" alt="" />
+                        <h3>Cash out</h3>
+                    </div>
+                    <div class="box border border-emerald-900 rounded-2xl p-4 text-center">
+                        <img class="w-6 mx-auto" src="assets/money1.png" alt="">
+                        <h3>Transfer Money</h3>
+                                  
+                    </div>
+                    <div class="box border border-emerald-900 rounded-2xl p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/send1.png" alt="" />
+                        <h3>Pay Bill</h3>
+                    </div>
+                    <div class="box border border-emerald-900 rounded-2xl p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/bonus1.png" alt="" />
+                        <h3>Bonus</h3>
+                    </div>
+                    <div class="box border border-emerald-900 rounded-2xl p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/transaction1.png" alt="" />
+                        <h3>Transaction history</h3>
+                    </div>
+                </div>
+                <section id="addmony">
+                    <h1 class="text-2xl form-control">Add Money</h1>
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                                <div class="card-body">
+                                    <legend>Select Bank</legend>
+                                    <select class="select select-bordered w-full max-w-xs">
+                                        <option disabled selected>Select Bank</option>
+                                        <option value="bkash">Bkash</option>
+                                        <option value="nogod">Nogod</option>
+                                        <option value="dbbl">DBBL</option>
+                                    </select>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Acount Number</span>
+                                        </label>
+                                        <input value="41357786502" id="Acount-number" type="text"
+                                            placeholder="type your number" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Amount</span>
+                                        </label>
+                                        <input id="amount" type="text" placeholder="type your amount"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">PIN</span>
+                                        </label>
+                                        <input value="1234" id="pin" type="text" placeholder="type your PIN"
+                                            class="input input-bordered" required />
+                                        <label class="label">
+                                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="add-money" class="btn btn-primary bg-blue-700">Add Money</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="cashout">
+                    <h1 class="text-2xl form-control">Cash Out</h1>
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                                <div class="card-body">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Acount Number</span>
+                                        </label>
+                                        <input value="41357786502" id="Acount-number" type="text"
+                                            placeholder="type your number" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Amount</span>
+                                        </label>
+                                        <input id="cashout-amount" type="text" placeholder="type your amount"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">PIN</span>
+                                        </label>
+                                        <input value="1234" id="cashout-pin" type="text" placeholder="type your PIN"
+                                            class="input input-bordered" required />
+                                        <label class="label">
+                                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="cashout-btn" class="btn btn-primary bg-blue-700">Cash Out</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+        </header>
+    </section>
+    
+</body>
+
+</html>
