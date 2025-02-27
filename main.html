@@ -16,7 +16,7 @@
                 <img src="assets/Group.png" alt="" />
                 <div>
                     <h1 class="text-3xl font-bold"> $ <span id="main-balance">4500</span></h1>
-                    <p class="border rounded p-1">available balance</p>
+                    <p class="border border-emerald-900 rounded p-1">available balance</p>
                 </div>
                 <button class="btn"> logout</button>
             </nav>
@@ -46,12 +46,12 @@
                         <img class="w-8 mx-auto" src="assets/bonus1.png" alt="" />
                         <h3>Bonus</h3>
                     </div>
-                    <div class="box border border-emerald-900 rounded-2xl p-4 text-center">
+                    <div id="transaction-box" class="box border border-emerald-900 rounded-2xl p-4 text-center">
                         <img class="w-8 mx-auto" src="assets/transaction1.png" alt="" />
                         <h3>Transaction history</h3>
                     </div>
                 </div>
-                <section id="addmony">
+                <section id="addmoney">
                     <h1 class="text-2xl form-control">Add Money</h1>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
@@ -84,9 +84,6 @@
                                         </label>
                                         <input value="1234" id="pin" type="text" placeholder="type your PIN"
                                             class="input input-bordered" required />
-                                        <label class="label">
-                                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                                        </label>
                                     </div>
                                     <div class="form-control mt-6">
                                         <button id="add-money" class="btn btn-primary bg-blue-700">Add Money</button>
@@ -123,9 +120,6 @@
                                         </label>
                                         <input value="1234" id="cashout-pin" type="text" placeholder="type your PIN"
                                             class="input input-bordered" required />
-                                        <label class="label">
-                                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                                        </label>
                                     </div>
                                     <div class="form-control mt-6">
                                         <button id="cashout-btn" class="btn btn-primary bg-blue-700">Cash Out</button>
@@ -135,11 +129,22 @@
                         </div>
                     </div>
                 </section>
-            </section>
+                <section id="transaction-history">
+                    <h1 class="text-3xl font-bold text-red-400 bg-yellow-400 text-center p-3 mt-6">Transection History
+                    </h1>
+                    <div id="transaction-container">
 
+                    </div>
+                </section>
+            </section>
+            <script src="script/addmoney.js"></script>
+            <script src="script/cashout.js"></script>
+            <script src="utilites/utilites.js"></script>
+            <script src="utilites/toggle.js"></script>
+            <script src="script/transactionHistory.js"></script>
         </header>
     </section>
-    
+
 </body>
 
 </html>
