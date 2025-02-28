@@ -5,7 +5,8 @@ document.getElementById('add-money').addEventListener('click', function (event) 
     const pin = getInputValueById("pin");
     const account = document.getElementById('Acount-number').value;
     const mainBalance = getInnerTextById("main-balance");
-    console.log(mainBalance)
+    const selectedBank = document.getElementById('allBank').value;
+    console.log(selectedBank);
 
     if (amount < 0) {
         alert("vai eita kono kotha positive number number dite hobe");
@@ -18,12 +19,17 @@ document.getElementById('add-money').addEventListener('click', function (event) 
             setInnerTextByIdandValue('main-balance', sum)
 
             const container = document.getElementById('transaction-container')
-            const p = document.createElement("p");
-            p.innerText = `
-            added ${amount} from ${account} account
+            
+            const div = document.createElement('div');
+            div.classList.add("bg-red-400")
+            div.innerHTML = `
+            <h1 class="text-yellow-300">ADDed Money from ${selectedBank} </h1>
+            <h3>${amount}</h3>
+            <p>account number: ${account}</p>
             `
-            container.appendChild(p)
+            container.appendChild(div);
         }
+        
         else {
           pin('pin number tik nai')  
         }

@@ -5,11 +5,15 @@ document.getElementById('cashout-btn').addEventListener('click', function (event
     const amount = getInputValueById('cashout-amount')
     const pinNumber = getInputValueById('cashout-pin');
     const mainBalance = getInnerTextById('main-balance');
-    // console.log(pin)
+    if (amount < 0) {
+        alert("vai eita kono kotha positive number number dite hobe");
+        return;
+    }
 
-    if (amount > mainBalance) {
+    if (amount>mainBalance) {
         alert("invalid amount");
         return;
+        
     }
     if (accountNumber.length === 11) {
         if (pinNumber === 1234) {
